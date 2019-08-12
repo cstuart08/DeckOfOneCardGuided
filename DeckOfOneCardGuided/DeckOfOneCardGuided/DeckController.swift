@@ -9,7 +9,7 @@
 import UIKit
 
 class DeckController {
-    private static let baseURL = URL(string: "https://deckofcardsapi.com/api/deck/new/draw/?count=1")
+    private static let baseURL = URL(string: "https://deckofcardsapi.com/api/deck/eyrwqhr0ca0m/draw/?count=1")
     
     static func drawOneCard() -> Card? {
         guard let url = baseURL else { return nil }

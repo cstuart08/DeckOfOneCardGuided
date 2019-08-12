@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var cardValueLabel: UILabel!
+    @IBOutlet weak var cardSuitLabel: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
     
 
@@ -21,9 +24,10 @@ class ViewController: UIViewController {
     @IBAction func drawCardButtonPressed(_ sender: Any) {
         let card = DeckController.drawOneCard()
         let image = DeckController.getImage(card!.image)
+        cardValueLabel.text = card?.value
+        cardSuitLabel.text = card?.suit
         cardImageView.image = image
         print(card)
     }
-    
 }
 
